@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+	<PlatformTarget>x64</PlatformTarget>
+	<Authors>Citruspress</Authors>
+	<Product />
+	<RepositoryUrl>git@github.com:citruspress/msfsgps.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FlightSimApi" Version="0.0.18" />
+  </ItemGroup>
+
+</Project>
