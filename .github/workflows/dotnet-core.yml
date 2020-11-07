@@ -20,7 +20,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish --configuration Release --no-build
+      run: dotnet publish --runtime win-x64 --configuration Release --self-contained false --no-build
     - uses: actions/upload-artifact@v2
       with:
         name: msfsgps
