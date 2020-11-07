@@ -46,6 +46,7 @@ namespace MSFSGPS
     {
         static async Task Main(string[] args)
         {
+            Console.WriteLine("Waiting for flight simulator...");
             var api = new SimConnectApi();
             using var gpsBroadcaster = new GpsBroadcaster();
 
@@ -65,6 +66,10 @@ namespace MSFSGPS
                 {
                     lastConnectedState = api.IsConnected;
                     Console.WriteLine($"{(api.IsConnected ? "Connected" : "Disconnected")} at {DateTime.UtcNow}");
+                    if (!api.IsConnected)
+                    {
+                        Console.WriteLine("MSFSGPS will automatically reconnect...");
+                    }
                 }
 
                 await Task.Delay(1000);
