@@ -10,6 +10,7 @@ namespace MSFSGPS
         Position,
     }
 
+#pragma warning disable CS0649
     [SimConnectType(Definitions.Attitude, samplingFrequency: 100)]
     internal struct Attitude
     {
@@ -41,6 +42,7 @@ namespace MSFSGPS
         [SimConnectValue("GPS GROUND SPEED")]
         public double GroundSpeed;
     }
+#pragma warning restore CS0649
 
     class Program
     {
